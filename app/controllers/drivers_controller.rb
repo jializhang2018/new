@@ -25,7 +25,7 @@ class DriversController < ApplicationController
   end
 
   def update
-
+    
   end
 
 end

@@ -17,15 +17,17 @@ ActiveRecord::Schema.define(version: 0) do
     t.text "photo_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean "assigned", default: false
   end
 
   create_table "rides", force: :cascade do |t|
+    t.text "passenger_name"
+    t.text "origin"
     t.text "destination"
+    t.boolean "complete", default: false
     t.integer "driver_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean "complete", default: false
-    t.text "origin"
     t.index ["driver_id"], name: "index_rides_on_driver_id"
   end
 

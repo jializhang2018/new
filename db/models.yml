@@ -4,10 +4,16 @@ Ride
   destination: text
   complete: boolean
   driver_id: integer
+  created_at: datetime
+  updated_at: datetime
 
 Driver
+  id: integer
   name: text
   photo_url: text
+  created_at: datetime
+  updated_at: datetime
+  assigned: boolean
 
 # Example:
 #

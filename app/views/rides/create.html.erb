@@ -1,2 +1,11 @@
-<h1>This is a placeholder page.</h1>
-<p>To modify this page, edit the template at <code>app/views/rides/create.html.erb</p>
+<% origin = params[:origin] %>
+<% destination = params[:destination] %>
+<% passenger_name = params[:passenger_name] %>
+
+<% if origin == "" || destination == "" || passenger_name == "" %>
+	<% controller.redirect_to "/" %>
+<% end %>
+
+
+
+<h1>the driver is comming.</h1>
