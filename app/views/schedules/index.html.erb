@@ -1,0 +1,55 @@
+<% day_of_week = params[:day_of_week] %>
+<% if day_of_week == nil %>
+  <% day_of_week = "Monday" %>
+<% end %>
+
+<h2 >Schedule</h2>
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th><a href="/schedules?day_of_week=Monday" class="btn btn-primary">Monday</a></th>
+          <th><a href="/schedules?day_of_week=Tuesday" class="btn btn-primary">Tuesday</a></th>
+          <th><a href="/schedules?day_of_week=Wednesday" class="btn btn-primary">Wednesday</a></th>
+          <th><a href="/schedules?day_of_week=Thursday" class="btn btn-primary">Thursday</a></th>
+          <th><a href="/schedules?day_of_week=Friday" class="btn btn-primary">Friday</a></th>
+          <th><a href="/schedules?day_of_week=Saturday" class="btn btn-primary">Saturday</a></th>
+          <th><a href="/schedules?day_of_week=Sunday" class="btn btn-primary">Sunday</a></th>
+        </tr>
+    </table>
+
+    <h4>AM</h4>
+    <table class="table table-striped table-hover">
+      <tbody>
+        <tr>
+            <td>Title</td><td>Day of the week</td><td>Time begin</td><td>Time end</td>
+        </tr>
+        <% for course in Course.where("day_of_week = ? and time_begin like \"\%AM\"", day_of_week).all.order("time_begin desc") %>
+          <tr>
+            <td><%= course.title %></td>
+            <td><%= course.day_of_week %></td>
+            <td><%= course.time_begin %></td>
+            <td><%= course.time_end %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <h4>PM</h4>
+    <table class="table table-striped table-hover">
+      <tbody>
+        <tr>
+            <td>Title</td><td>Day of the week</td><td>Time begin</td><td>Time end</td>
+        </tr>
+        <% for course in Course.where("day_of_week = ? and time_begin like \"\%PM\"", day_of_week).all.order("time_begin desc") %>
+          <tr>
+            <td><%= course.title %></td>
+            <td><%= course.day_of_week %></td>
+            <td><%= course.time_begin %></td>
+            <td><%= course.time_end %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

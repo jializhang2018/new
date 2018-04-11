@@ -1,0 +1,91 @@
+<h2>Add a course</h2>
+<p> Please make sure the begin time is earlier than the end time before submitting </p>
+<hr>
+<div>
+  <form action="/courses" method="post">
+      <p>
+        Title?
+        <input autofocus type="text" name="title" class="form-control" style="width: 300px">
+      </p>
+      <p>
+        Please choose a day
+        <br>
+        <select name="day_of_week">
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+        </select>
+      </p>
+      <p>
+        Time begin?
+        <br>
+        hour:
+        <select name="time_begin_hour">
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        &nbsp;min:
+        <select name="time_begin_min">
+          <option value="00">00</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+        </select>
+        &nbsp;AM/PM:
+        <select name="time_begin_ampm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </p>
+      <p>
+        Time end?
+        <br>
+        hour:
+        <select name="time_end_hour">
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        &nbsp;min:
+        <select name="time_end_min">
+          <option value="00">00</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+        </select>
+        &nbsp;AM/PM:
+        <select name="time_end_ampm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </p>
+      <button class="btn btn-primary">Submit</button> <td><a href="/courses" class="btn btn-primary">Cancel</a></td>
+    </form>
+</div>

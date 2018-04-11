@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'rides#new'
+  root 'courses#index'
 
-  resources :rides
-  resources :drivers
+  resources :courses
+  resources :schedules
 
 end

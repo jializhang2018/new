@@ -1,0 +1,24 @@
+<h2>Counrse List</h2>
+<td><a href="/courses/new" class="mr-2 btn btn-primary">Add a course</a></td>
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Title</th><th>Day of the week</th><th>Time begin</th><th>Time end</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for course in Course.all.order("created_at desc") %>
+          <tr>
+            <td><%= course.title %></td>
+            <td><%= course.day_of_week %></td>
+            <td><%= course.time_begin %></td>
+            <td><%= course.time_end %></td>
+            <td><%= link_to 'Remove Course', course, :method => :delete, data: { confirm: 'Remove Course?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

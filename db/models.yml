@@ -1,19 +1,8 @@
-Ride
-  passenger_name: text
-  origin: text
-  destination: text
-  complete: boolean
-  driver_id: integer
-  created_at: datetime
-  updated_at: datetime
-
-Driver
-  id: integer
-  name: text
-  photo_url: text
-  created_at: datetime
-  updated_at: datetime
-  assigned: boolean
+Course
+  title: text
+  day_of_week: text
+  time_begin: text
+  time_end: text
 
 # Example:
 #

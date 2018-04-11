@@ -11,24 +11,12 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 0) do
-
-  create_table "drivers", force: :cascade do |t|
-    t.text "name"
-    t.text "photo_url"
+	create_table "courses", force: :cascade do |t|
+    t.text "title"
+    t.text "day_of_week"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean "assigned", default: false
+    t.text "time_begin"
+    t.text "time_end"
   end
-
-  create_table "rides", force: :cascade do |t|
-    t.text "passenger_name"
-    t.text "origin"
-    t.text "destination"
-    t.boolean "complete", default: false
-    t.integer "driver_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["driver_id"], name: "index_rides_on_driver_id"
-  end
-
 end

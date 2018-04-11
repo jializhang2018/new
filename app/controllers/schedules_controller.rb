@@ -1,4 +1,4 @@
-class DriversController < ApplicationController
+class SchedulesController < ApplicationController
 
   def index
 
@@ -17,11 +17,11 @@ class DriversController < ApplicationController
   end
 
   def create
-
+    
   end
 
   def edit
-
+    
   end
 
   def update
